@@ -1,5 +1,13 @@
 .header{
-  background-color: rgb(23, 44, 205);
-  color: white
+  background-color: rgb(34, 34, 34);
+  color: rgb(255, 255, 255)
 }
+.profile{
+  display: flex;
+  margin-top: 10%;
+}
+#profile-pic{
+  border-radius: 50%;
+}
+
 

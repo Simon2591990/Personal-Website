@@ -1,9 +1,9 @@
-
 import './App.css';
 import tournament_app from "./images/leaderboard_app.png"
 import kings_cup from "./images/kings_cup.png"
 import pokecenter from "./images/pokecenter.png"
-import { Accordion, AccordionDetails, AccordionSummary, Button, CardHeader, Drawer, Grid } from '@material-ui/core';
+import self from "./images/self.jpg"
+import { Accordion, AccordionDetails, AccordionSummary, AppBar, Button, Container, Drawer, Grid, Typography } from '@material-ui/core';
 import { useState } from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandMore from '@material-ui/icons/ExpandMore';
@@ -22,13 +22,27 @@ function App() {
   }
   return (
     <>
-      <Grid className="header" container justify="center" >
-        <header>
+    <AppBar>   
+        <Grid className='header'>
           <h1>Simon Charters</h1>
-        </header>
-        <Button onClick={toggleDrawer}>|||</Button>
+          <button onClick={toggleDrawer}>Skills</button>
+        </Grid>
+      
+      
+    </AppBar>
+      <Grid className='profile'>
+        <img id='profile-pic' src={self} width='200px'/> 
+        <div>
+          <Container maxWidth='sm'>
+          <Typography >
+            I am a software developer with an aptitude for problem solving, a passion for learning and a drive for continuous improvement in everything I do. 
+            With 4+ years of experience teaching music to a diverse range of students, I can communicate effectively at all levels. 
+            Running my own business has also taught me how to prioritise my workload and manage expectations.
+          </Typography>
+          </Container>
+        </div>
       </Grid>
-        <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)} >
+        <Drawer anchor="left" open={drawerOpen} onClose={() => setDrawerOpen(false)} >
           <h2>Languages</h2>
           <ul>
             <li>
@@ -42,10 +56,12 @@ function App() {
             </li>
           </ul>
         </Drawer>
-        <Grid>
+        
+        <Grid className='projects'>
+          <h2>Projects</h2>
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMore/>}>
-              <h1>Leaderboard App</h1>
+              <h3>Leaderboard App</h3>
             </AccordionSummary>
             <AccordionDetails>
               <div>
@@ -67,7 +83,7 @@ function App() {
           </Accordion>
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMore/>}>
-              <h1>Kings Cup Game</h1>
+              <h3>Kings Cup Game</h3>
             </AccordionSummary>
             <AccordionDetails>
               <div>
@@ -87,7 +103,7 @@ function App() {
           </Accordion>
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMore/>}>
-              <h1>Vet Managment App</h1>
+              <h3>Vet Managment App</h3>
             </AccordionSummary>
             <AccordionDetails>
               <div>

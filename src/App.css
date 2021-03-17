@@ -4,10 +4,20 @@
 }
 .profile{
   display: flex;
-  margin-top: 10%;
+  margin-top: 10px;
 }
 #profile-pic{
   border-radius: 50%;
+}
+
+.projects{
+  
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin: 10px;
+}
+body{
 }
 
 

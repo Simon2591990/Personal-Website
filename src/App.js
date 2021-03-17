@@ -3,9 +3,10 @@ import tournament_app from "./images/leaderboard_app.png"
 import kings_cup from "./images/kings_cup.png"
 import pokecenter from "./images/pokecenter.png"
 import self from "./images/self.jpg"
-import { Accordion, AccordionDetails, AccordionSummary, AppBar, Button, Container, Drawer, Grid, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, AppBar, Button, Container, Drawer, Grid, IconButton, Toolbar, Typography } from '@material-ui/core';
 import { useState } from 'react';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+import MenuIcon from '@material-ui/icons/Menu'
 import ExpandMore from '@material-ui/icons/ExpandMore';
 
 function App() {
@@ -22,13 +23,14 @@ function App() {
   }
   return (
     <>
-    <AppBar>   
-        <Grid className='header'>
+    <AppBar position='static'>   
+        <Toolbar>
+          <IconButton edge='start' onClick={toggleDrawer}>
+            <MenuIcon/>
+          </IconButton>
           <h1>Simon Charters</h1>
-          <button onClick={toggleDrawer}>Skills</button>
-        </Grid>
-      
-      
+        </Toolbar>
+          
     </AppBar>
       <Grid className='profile'>
         <img id='profile-pic' src={self} width='200px'/> 
@@ -57,7 +59,7 @@ function App() {
           </ul>
         </Drawer>
         
-        <Grid className='projects'>
+        <Grid className='projects' container >
           <h2>Projects</h2>
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMore/>}>

@@ -5,7 +5,6 @@ import pokecenter from "./images/pokecenter.png"
 import self from "./images/self.jpg"
 import { Accordion, AccordionDetails, AccordionSummary, AppBar, Button, Container, Drawer, Grid, IconButton, Toolbar, Typography } from '@material-ui/core';
 import { useState } from 'react';
-
 import MenuIcon from '@material-ui/icons/Menu'
 import ExpandMore from '@material-ui/icons/ExpandMore';
 
@@ -25,9 +24,7 @@ function App() {
     <>
     <AppBar position='static'>   
         <Toolbar>
-          <IconButton edge='start' onClick={toggleDrawer}>
-            <MenuIcon/>
-          </IconButton>
+          
           <h1>Simon Charters</h1>
         </Toolbar>
           
@@ -44,20 +41,7 @@ function App() {
           </Container>
         </div>
       </Grid>
-        <Drawer anchor="left" open={drawerOpen} onClose={() => setDrawerOpen(false)} >
-          <h2>Languages</h2>
-          <ul>
-            <li>
-              Python
-            </li>
-            <li>
-              JavaScript
-            </li>
-            <li>
-              Java
-            </li>
-          </ul>
-        </Drawer>
+        
         
         <Grid className='projects' container >
           <h2>Projects</h2>
